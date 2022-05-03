@@ -57,7 +57,7 @@ class Human {
     if (newCell && this.energy >= 0) {
       const newX = newCell[0]
       const newY = newCell[1]
-      matrix[newY][newX] = matrix[this.y][this.x]
+      matrix[newY][newX] = matrix[this.y][this.x] ///kam 2 tiv@
       matrix[this.y][this.x] = 0
       this.x = newX
       this.y = newY
@@ -73,7 +73,7 @@ class Human {
       this.energy++
       const newX = newCell[0]
       const newY = newCell[1]
-      matrix[newY][newX] = matrix[this.y][this.x]
+      matrix[newY][newX] = matrix[this.y][this.x] ///kam 2 tiv@
       matrix[this.y][this.x] = 0
       this.x = newX
       this.y = newY
@@ -97,7 +97,7 @@ class Human {
     for (let i in humanArr) {
       if (this.x == humanArr[i].x && this.y == humanArr[i].y) {
         humanArr.splice(i, 1)
-        break
+        break;
       }
     }
   }

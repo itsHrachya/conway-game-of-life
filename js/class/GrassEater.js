@@ -2,7 +2,7 @@ class GrassEater {
   constructor(x, y) {
     this.x = x
     this.y = y
-    this.energy = 8
+    this.energy = 16
     this.directions = []
   }
   getNewCoordinates() {
@@ -55,7 +55,7 @@ class GrassEater {
     if (newCell && this.energy >= 0) {
       const newX = newCell[0]
       const newY = newCell[1]
-      matrix[newY][newX] = matrix[this.y][this.x]
+      matrix[newY][newX] = matrix[this.y][this.x] ///kam 2 tiv@
       matrix[this.y][this.x] = 0
       this.x = newX
       this.y = newY
@@ -71,7 +71,7 @@ class GrassEater {
       this.energy++
       const newX = newCell[0]
       const newY = newCell[1]
-      matrix[newY][newX] = matrix[this.y][this.x]
+      matrix[newY][newX] = matrix[this.y][this.x] ///kam 2 tiv@
       matrix[this.y][this.x] = 0
       this.x = newX
       this.y = newY

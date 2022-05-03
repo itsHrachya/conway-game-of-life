@@ -2,7 +2,7 @@ class Alien {
   constructor(x, y) {
     this.x = x
     this.y = y
-    this.energy = 20
+    this.energy = 12
     this.directions = []
   }
 

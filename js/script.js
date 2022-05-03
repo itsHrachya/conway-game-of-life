@@ -3,14 +3,14 @@ function generate(matLen, gr, grEat, pr, hm, al) {
   for (let i = 0; i < matLen; i++) {
     matrix[i] = []
     for (let j = 0; j < matLen; j++) {
-      matrix[i][j] = 0
+      matrix[i][j] = 0;
     }
   }
 
   function returnIndex(charatcher, index) {
     for (let i = 0; i < charatcher; i++) {
-      const x = Math.floor(Math.random() * matLen);
-      const y = Math.floor(Math.random() * matLen);
+      const x = Math.floor(Math.random() * matLen)
+      const y = Math.floor(Math.random() * matLen)
       if (matrix[y][x] == 0) {
         matrix[y][x] = index
       }
@@ -23,12 +23,12 @@ function generate(matLen, gr, grEat, pr, hm, al) {
   returnIndex(hm, 4)
   returnIndex(al, 5)
 
-  return matrix;
+  return matrix
 }
 
-const matrix = generate(20, 45, 20, 20, 22, 10);
+const matrix = generate(20, 45, 20, 15, 12, 6)
 
-const side = 35;
+const side = 35
 
 const grassArr = []
 const grassEaterArr = []
@@ -37,8 +37,8 @@ const humanArr = []
 const alienArr = []
 
 function setup() {
-  frameRate(4);
-  createCanvas(matrix[0].length * side, matrix.length * side);
+  frameRate(4)
+  createCanvas(matrix[0].length * side, matrix.length * side)
 
   for (let y = 0; y < matrix.length; y++) {
     for (let x = 0; x < matrix[y].length; x++) {
@@ -63,10 +63,10 @@ function draw() {
                 matrix[y][x] === 5 ? fill('purple') :
                   false
 
-      rect(x * side, y * side, side, side);
+      rect(x * side, y * side, side, side)
     }
   }
-
+  
   for (let i in grassArr) {
     grassArr[i].mul()
   }
