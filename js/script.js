@@ -37,7 +37,7 @@ const humanArr = []
 const alienArr = []
 
 function setup() {
-  frameRate(4)
+  frameRate(5)
   createCanvas(matrix[0].length * side, matrix.length * side)
 
   for (let y = 0; y < matrix.length; y++) {
